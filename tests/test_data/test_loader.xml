@@ -1,0 +1,8 @@
+<site>
+    <url>http://spaces.ru/devices/catalog/?brand=Samsung&amp;link_id=832745&amp;p={page}&amp;sort=1</url>
+    <limit>3</limit>
+    <path>//div[@class='t-strong_item t-link_item_hover m']/text()</path>
+    <expected> a890 </expected>
+    <expected> B5512 </expected>
+    <expected> B7610 </expected>
+</site>

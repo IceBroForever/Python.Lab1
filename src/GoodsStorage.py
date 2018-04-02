@@ -6,6 +6,9 @@ class GoodsStorage:
     def __init__(self):
         self.__storage = []
 
+    def size(self):
+        return len(self.__storage)
+
     def add(self, good):
         if not isinstance(good, Good):
             return
@@ -28,6 +31,9 @@ class GoodsStorage:
         for notebook in self.__storage:
             root.append(notebook.to_XML())
         return etree.tostring(root, pretty_print=True, encoding = "unicode")
+
+    def __getitem__(self, key):
+        return self.__storage[key]
 
     def __str__(self):
         string = ''

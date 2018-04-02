@@ -8,6 +8,7 @@ selenium = "*"
 pylint = "*"
 lxml = "*"
 "autopep8" = "*"
+pytest = "*"
 
 [dev-packages]
 

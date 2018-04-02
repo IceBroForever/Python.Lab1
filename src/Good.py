@@ -22,7 +22,7 @@ class Good:
     def __eq__(self, other):
         if not isinstance(other, Good):
             return False
-        return self.__distance(other) <= 4
+        return self.__distance(other) <= 3
 
     def try_update_prices(self, price):
         if self.__min_price > price:
