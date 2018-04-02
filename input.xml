@@ -1,0 +1,44 @@
+<sites>
+    <site>
+        <url>https://rozetka.com.ua/notebooks/c80004/filter/page={page}</url>
+        <limit>10</limit>
+        <paths>
+            <to_goods>//div[@class='g-i-tile-i-box-desc']</to_goods>
+            <to_title>.//div[@class='g-i-tile-i-title clearfix']/a/text()</to_title>
+            <to_price>.//div[@class='g-price-uah']/text()</to_price>
+        </paths>
+        <trash>
+            <item>Суперцена!!!</item>
+            <item>Ноутбук</item>
+            <item>\+.*</item>
+            <item>\(.*\)</item>
+        </trash>
+    </site>
+    <site>
+        <url>https://allo.ua/ru/products/notebooks/p-{page}/</url>
+        <limit>10</limit>
+        <paths>
+            <to_goods>//li[@class='item']</to_goods>
+            <to_title>.//a[@class='product-name']/@title</to_title>
+            <to_price>.//div[@class='price-box']//span[contains(@class,'sum')]/text()</to_price>
+        </paths>
+        <trash>
+            <item>\".*\"</item>
+            <item>\(.*\)</item>
+            <item>\.{3}</item>
+        </trash>
+    </site>
+    <site>
+        <url>https://comfy.ua/notebook/?p={page}/</url>
+        <limit>10</limit>
+        <paths>
+            <to_goods>//div[contains(@class,'product-item')]</to_goods>
+            <to_title>.//a[@class='product-item__name-link']/@title</to_title>
+            <to_price>.//div[contains(@class,'price-box__content']//span[@class='price-value']/text()</to_price>
+        </paths>
+        <trash>
+            <item>Ноутбук</item>
+            <item>\(.*\)</item>
+        </trash>
+    </site>
+</sites>
